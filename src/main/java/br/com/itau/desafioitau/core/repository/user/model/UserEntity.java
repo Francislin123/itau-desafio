@@ -1,9 +1,10 @@
 package br.com.itau.desafioitau.core.repository.user.model;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Tolerate;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by Francislin Dos Reis on 12/12/17.
@@ -13,4 +14,37 @@ import javax.persistence.Table;
 @Table(name = "tab_user")
 public class UserEntity {
 
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "cell")
+    private String telefone;
+
+    @Column(name = "cpf")
+    private String cpf;
+
+    @Column(name = "divida_ativa")
+    private boolean dividaAtiva;
+
+    @Tolerate
+    public UserEntity() {
+        // Default method for hibernate
+    }
+
+    @Builder
+    public UserEntity(Long id, String name, String email, String telefone, String cpf, boolean dividaAtiva) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.dividaAtiva = dividaAtiva;
+    }
 }
