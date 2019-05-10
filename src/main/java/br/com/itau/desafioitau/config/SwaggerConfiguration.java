@@ -1,4 +1,4 @@
-package br.com.itau.desafioitau;
+package br.com.itau.desafioitau.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
