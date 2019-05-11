@@ -35,5 +35,5 @@ control the flow of credit recovery systems (collection and renegotiation).
 ### The sql project file is in the folder
 - resources/db
 
-### Diagram of the h2 database
+### Database modeling
 ![Captura de Tela 2019-05-11 às 18 46 50](https://user-images.githubusercontent.com/27180618/57575590-b4f2d000-7423-11e9-9ad5-ec3623d012bf.png)
