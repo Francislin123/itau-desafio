@@ -1,7 +1,7 @@
 info:
   component: Itau Api
   project:
-    name: Itau-api
+    name: itau-api
     version: 0.0.1-SNAPSHOT
 
 server:
