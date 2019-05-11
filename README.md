@@ -34,3 +34,6 @@ control the flow of credit recovery systems (collection and renegotiation).
 
 ### The sql project file is in the folder
 - resources/db
+
+### Diagram of the h2 database
+- ![alt text](http://twixar.me/HTnn)
