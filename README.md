@@ -31,3 +31,6 @@ control the flow of credit recovery systems (collection and renegotiation).
 
 ### Send email with Gmail (Google)
 - To send mail, the configuration made and to gmail
+
+### The sql project file is in the folder
+- resources/db
