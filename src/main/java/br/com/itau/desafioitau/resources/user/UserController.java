@@ -1,7 +1,6 @@
 package br.com.itau.desafioitau.resources.user;
 
-import br.com.itau.desafioitau.core.service.UserService;
-import com.nexmo.client.NexmoClientException;
+import br.com.itau.desafioitau.core.service.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.io.IOException;
 import java.util.List;
 
 @Api(value = "onlinestore", description = "Operations relating to the users")
@@ -33,8 +31,8 @@ public class UserController {
             @ApiResponse(code = 200, message = "Successful send message", response = ResponseEntity.class),
             @ApiResponse(code = 409, message = "Validation error"),
             @ApiResponse(code = 500, message = "Unhandled exception")})
-    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity sendMessageForCell(@Valid @RequestBody List<String> cells) throws IOException, NexmoClientException {
+    @RequestMapping(path = "/message-send", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity sendMessageForCell(@Valid @RequestBody List<String> cells) {
 
         userService.sendMessageForCell(cells);
 

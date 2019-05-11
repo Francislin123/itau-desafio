@@ -1,4 +1,4 @@
-package br.com.itau.desafioitau.core.service;
+package br.com.itau.desafioitau.core.service.user;
 
 import com.nexmo.client.NexmoClient;
 import com.nexmo.client.NexmoClientException;
@@ -51,13 +51,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void sendMessageForCell(List<String> cells) throws IOException, NexmoClientException {
+    public void sendMessageForCell(List<String> cells) {
 
         for (String sms : cells) {
             AuthMethod auth = new TokenAuthMethod(API_KEY, API_SECRET);
             NexmoClient client = new NexmoClient(auth);
             TextMessage message = new TextMessage("5511995476108", sms, msg);
-            SmsSubmissionResult[] responses = client.getSmsClient().submitMessage(message);
+            SmsSubmissionResult[] responses = new SmsSubmissionResult[0];
+            try {
+                responses = client.getSmsClient().submitMessage(message);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (NexmoClientException e) {
+                e.printStackTrace();
+            }
             for (SmsSubmissionResult response : responses) {
                 System.out.println(response);
             }
