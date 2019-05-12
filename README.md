@@ -1,4 +1,4 @@
-# itau-desafio
+# Itau-desafio
 
 - This application is responsible for 
 control the flow of credit recovery systems (collection and renegotiation).
