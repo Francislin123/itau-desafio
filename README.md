@@ -37,3 +37,6 @@ control the flow of credit recovery systems (collection and renegotiation).
 
 ### Database modeling
 ![Captura de Tela 2019-05-11 às 18 46 50](https://user-images.githubusercontent.com/27180618/57575590-b4f2d000-7423-11e9-9ad5-ec3623d012bf.png)
+
+### Solution Deployment Diagram
+![Captura de Tela 2019-05-12 às 15 18 49](https://user-images.githubusercontent.com/27180618/57586263-c989a380-74c9-11e9-9254-14a959166194.png)
