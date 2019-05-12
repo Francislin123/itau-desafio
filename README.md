@@ -40,3 +40,6 @@ control the flow of credit recovery systems (collection and renegotiation).
 
 ### Solution Deployment Diagram
 ![Captura de Tela 2019-05-12 às 15 18 49](https://user-images.githubusercontent.com/27180618/57586263-c989a380-74c9-11e9-9254-14a959166194.png)
+
+### Architecture diagram
+![Captura de Tela 2019-05-12 às 15 54 17](https://user-images.githubusercontent.com/27180618/57586610-68180380-74ce-11e9-91e7-b9234da63b0c.png)
