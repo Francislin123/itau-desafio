@@ -33,7 +33,7 @@ control the flow of credit recovery systems (collection and renegotiation).
 - To send mail, the configuration made and to gmail
 
 ### The sql project file is in the folder
-- resources/db
+- resources/db/sql-project.sql
 
 ### Database modeling
 ![Captura de Tela 2019-05-11 às 18 46 50](https://user-images.githubusercontent.com/27180618/57575590-b4f2d000-7423-11e9-9ad5-ec3623d012bf.png)
