@@ -1,5 +1,6 @@
 package br.com.itau.desafioitau.core.service.user;
 
+import br.com.itau.desafioitau.core.exceptions.UserException;
 import com.nexmo.client.NexmoClient;
 import com.nexmo.client.NexmoClientException;
 import com.nexmo.client.auth.AuthMethod;
@@ -45,7 +46,7 @@ public class UserServiceImpl implements UserService {
                 helper.setText(msgEmail, true);
                 mailSender.send(mail);
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new UserException("Error trying to send email", e);
             }
         }
     }
@@ -61,9 +62,9 @@ public class UserServiceImpl implements UserService {
             try {
                 responses = client.getSmsClient().submitMessage(message);
             } catch (IOException e) {
-                e.printStackTrace();
-            } catch (NexmoClientException e) {
-                e.printStackTrace();
+                throw new UserException("Error trying to send sms", e);
+            } catch (NexmoClientException nxe) {
+                throw new UserException("Error trying to send sms", nxe);
             }
             for (SmsSubmissionResult response : responses) {
                 System.out.println(response);
